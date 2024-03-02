@@ -8,7 +8,7 @@ from scipy import io
 
 if __name__ == "__main__":
     for data_name in ["mnist", "spam", "cifar10"]:
-        data = np.load(f"../data/{data_name}-data.npz")
+        data = np.load(f"../data/{data_name}-data.npz", allow_pickle=True)
         print("\nloaded %s data!" % data_name)
         fields = "test_data", "training_data", "training_labels"
         for field in fields:
